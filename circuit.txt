@@ -1,0 +1,18 @@
+# Voltage source at node 'a' (2V)
+a = 2
+c = 3
+
+# Ground at node 'f' (0V)
+g = 0
+h = 0
+
+# Resistors (node pair = resistance in ohms)
+ab = 100
+bd = 200
+cd = 50
+de = 150
+bf = 100
+fe = 100
+fg = 50
+eh = 100000
+ci = 100

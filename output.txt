@@ -1,0 +1,25 @@
+# Circuit Analysis Results
+# Currents through resistors (in Amperes)
+# Positive value: current flows from first node to second node
+
+# Node Voltages:
+# a = 2.000000 V
+# b = 1.591847 V
+# c = 3.000000 V
+# d = 2.447483 V
+# e = 1.431661 V
+# f = 0.755877 V
+# g = 0.000000 V
+# h = 0.000000 V
+# i = 3.000000 V
+
+# Resistor Currents:
+ab = 0.004082
+bd = -0.004278
+bf = 0.008360
+cd = 0.011050
+ci = 0.000000
+de = 0.006772
+ef = 0.006758
+eh = 0.000014
+fg = 0.015118
