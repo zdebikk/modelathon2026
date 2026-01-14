@@ -3,8 +3,8 @@ a = 2
 c = 3
 
 # Ground at node 'f' (0V)
-g = 0
-h = 0
+g = 1
+h = 1
 
 # Resistors (node pair = resistance in ohms)
 ab = 100
