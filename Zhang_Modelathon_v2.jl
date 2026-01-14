@@ -96,7 +96,7 @@ function cow_zhang_v1_press!(dx, x, p, t)
     P2, P4, P5, P7, P11, P12, P14 = x[1], x[2], x[3], x[4], x[5], x[6], x[7]
 
     # --- Ohm's Law ---
-    iBA = PBA / R3
+    iBA = (PBA - P4)/ R3
     i4p = (P4 - P5) / R4p
     i4 = (P4 - P12) / R4
     i6 = (P5 - Pout) / R6
@@ -114,7 +114,7 @@ function cow_zhang_v1_press!(dx, x, p, t)
     i15 = (P14 - Pout) / R15
 
     # --- Continuity ---
-    iC4p = iBA - i4 - (i6+ i5)
+    iC4p = iBA - i4 - i6- i5
 
     # --- Derivatives ---
     dx[3] = (1 / R4p * P4 + 1 / R5 * P2 - (1 / R4p + 1 / R6 + 1 / R5) * P5) / C4p # dP5
@@ -156,17 +156,17 @@ function cow_zhang_v1_flows(t_vec, x_mat, p)
     Pout = 20.0 # From define_BCs
 
     ## Ohm's law
-    iBA = PBA ./ R3
+    iBA = (PBA .- P4) ./ R3
     i4p = (P4 .- P5) ./ R4p 
     i4 = (P4 .- P12) ./ R4
     i6 = (P5 .- Pout) ./ R6
     i13 = (P12 .- Pout) ./ R13
     i5 = (P5 .- P2) ./ R5
-    i12 = (P12 .- P11) / R12
+    i12 = (P12 .- P11) ./ R12
     iICA1 = (PICA .- P2) ./ R1
     iICA2 = (PICA .- P11) ./ R1p
     i9 = (P2 .- Pout) ./ R9
-    i16 = (P11 .- Pout) / R16
+    i16 = (P11 .- Pout) ./ R16
     i2 = (P2 .- P7) ./ R2
     i11 = (P11 .- P14) ./ R11
     i8 = (P7 .- Pout) ./ R8
