@@ -114,7 +114,7 @@ function cow_zhang_v1_press!(dx, x, p, t)
     i15 = (P14 - Pout) / R15
 
     # --- Continuity ---
-    # iC4p = i4p - (i06+ i5)
+    iC4p = iBA - i4 - (i6+ i5)
 
     # --- Derivatives ---
     dx[3] = (1 / R4p * P4 + 1 / R5 * P2 - (1 / R4p + 1 / R6 + 1 / R5) * P5) / C4p # dP5
